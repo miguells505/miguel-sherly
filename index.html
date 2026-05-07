@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>Miguel & Sherly – Our Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fbfaf7;
+            font-family: 'Inter', sans-serif;
+            color: #2c2a29;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --sage: #9caf88;
+            --sage-dark: #6b8256;
+            --sage-light: #d4e0ca;
+            --sage-soft: #eef3e9;
+            --cream: #fffef7;
+            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 25px 40px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ==================== HERO SECTION ENHANCED ==================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+            background: linear-gradient(145deg, #e8f0e0 0%, #d4e0ca 50%, #c2d4b4 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 12s ease infinite;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,240,0.4) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            z-index: 2;
+            background: rgba(255, 255, 245, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 2rem 2.8rem;
+            border-radius: 60px;
+            margin: 1rem;
+            border: 1px solid rgba(255, 255, 245, 0.5);
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        .hero-content:hover {
+            transform: scale(1.01);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-image {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 1.5rem;
+            background: var(--sage-light);
+            border-radius: 32px;
+            transition: all 0.4s ease;
+            border: 3px solid rgba(255,255,245,0.6);
+        }
+
+        .hero-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 30px 45px -15px rgba(0,0,0,0.2);
+            border-color: rgba(255,255,245,0.9);
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c4522;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(255,255,240,0.5);
+        }
+
+        /* TYPING EFFECT */
+        .typing-wrapper {
+            min-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .typed-text {
+            font-size: 1.15rem;
+            color: #3a5930;
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.5px;
+            border-top: 1px solid rgba(156, 175, 136, 0.4);
+            padding-top: 0.8rem;
+            display: inline-block;
+        }
+
+        .typed-cursor {
+            font-size: 1.15rem;
+            color: #3a5930;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* CTA BUTTON */
+        .cta-button {
+            margin-top: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(156, 175, 136, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(156, 175, 136, 0.6);
+            padding: 10px 24px;
+            border-radius: 50px;
+            color: #2c4522;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background: rgba(156, 175, 136, 0.4);
+            transform: translateY(-3px);
+            gap: 12px;
+        }
+
+        .cta-button i {
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover i {
+            transform: translateX(5px);
+        }
+
+        .click-hint {
+            margin-top: 1.5rem;
+            font-size: 0.7rem;
+            color: #4a6740;
+            opacity: 0.6;
+            letter-spacing: 1px;
+        }
+
+        /* Daun Jatuh */
+        .falling-leaf {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: fallLeaf linear forwards;
+            will-change: transform;
+        }
+
+        @keyframes fallLeaf {
+            0% {
+                transform: translateY(-20vh) rotate(0deg);
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(110vh) rotate(300deg);
+                opacity: 0;
+            }
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8faf4 100%);
+            border-radius: 48px;
+            margin: -2rem 0 3rem;
+            padding: 2rem 1.8rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(156, 175, 136, 0.4);
+            position: relative;
+            z-index: 5;
+        }
+
+        .countdown-title {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #4a613b;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-title i {
+            font-size: 2rem;
+            color: var(--sage);
+        }
+
+        .together-stats {
+            background: #fefcf5;
+            border-radius: 32px;
+            padding: 1.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border: 1px solid #e9e2d4;
+        }
+
+        .together-stats p {
+            font-size: 0.9rem;
+            color: #6f7c60;
+            letter-spacing: 1px;
+        }
+
+        .time-digits {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 0.8rem 0 0.5rem;
+        }
+
+        .time-unit {
+            background: white;
+            min-width: 85px;
+            padding: 0.8rem 0.4rem;
+            border-radius: 28px;
+            border: 1px solid var(--sage-light);
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .time-unit:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+            border-color: var(--sage);
+        }
+
+        .time-number {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Inter', monospace;
+            color: #2f4d2d;
+            line-height: 1;
+        }
+
+        .time-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #8b9a78;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        .countdown-clock {
+            background: #eef3e9;
+            border-radius: 28px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .countdown-clock h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #3e5a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .cd-digits {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .cd-box {
+            background: white;
+            border-radius: 24px;
+            padding: 0.6rem 1rem;
+            min-width: 85px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .cd-box:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cd-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            font-family: 'Inter', monospace;
+            color: #3d5c2e;
+        }
+
+        .cd-label {
+            font-size: 0.7rem;
+            color: #8d9b7a;
+            font-weight: 500;
+        }
+
+        .next-anniversary {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #6d7f5a;
+            font-style: italic;
+        }
+
+        /* Navbar */
+        .nav-scroll-wrapper {
+            position: fixed;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .nav-bar {
+            background: rgba(255, 255, 245, 0.96);
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 0.6rem 1.2rem;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            white-space: nowrap;
+            pointer-events: auto;
+            max-width: 92vw;
+            border: 1px solid rgba(156, 175, 136, 0.3);
+        }
+
+        .nav-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-item {
+            font-size: 0.8rem;
+            font-weight: 500;
+            background: transparent;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            color: #3f4d35;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border-radius: 40px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item i {
+            color: var(--sage);
+        }
+
+        .nav-item:hover {
+            background: var(--sage-soft);
+        }
+
+        section {
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid #ece6db;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            color: #4a613b;
+            border-left: 4px solid var(--sage);
+            padding-left: 1rem;
+        }
+
+        /* GALLERY - RAPIH DAN KECIL */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: var(--sage-light);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .modal-img {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .modal-img img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 20px;
+        }
+
+        /* OUR FAVORITES - GRID KARTU */
+        .favorites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .fav-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e9e2d4;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .fav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--sage);
+        }
+
+        .fav-icon {
+            font-size: 2.5rem;
+            color: var(--sage);
+            margin-bottom: 0.8rem;
+        }
+
+        .fav-category {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--sage-dark);
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .fav-item-miguel, .fav-item-sherly {
+            font-size: 0.8rem;
+            padding: 0.3rem 0;
+        }
+
+        .fav-item-miguel {
+            color: #2c4522;
+            font-weight: 500;
+        }
+
+        .fav-item-sherly {
+            color: #6b8256;
+        }
+
+        .fav-divider {
+            width: 30px;
+            height: 1px;
+            background: #d4e0ca;
+            margin: 0.5rem auto;
+        }
+
+        /* Love Letter */
+        .love-letters-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .letter-card {
+            flex: 1;
+            min-width: 260px;
+            background: var(--cream);
+            border-radius: 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #e0d9c8;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .letter-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .letter-header {
+            background: var(--sage-light);
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: #2e4822;
+        }
+
+        .letter-body {
+            padding: 1.2rem;
+        }
+
+        .password-area {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .password-area input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid var(--sage-light);
+            border-radius: 40px;
+            font-family: monospace;
+            outline: none;
+        }
+
+        .unlock-btn {
+            background: var(--sage);
+            border: none;
+            padding: 0 18px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .unlock-btn:hover {
+            background: #7e966b;
+        }
+
+        .letter-content {
+            background: #fffaf0;
+            padding: 1rem;
+            border-radius: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            min-height: 140px;
+        }
+
+        .locked-message {
+            color: #b5a87c;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Music */
+        .music-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .music-card {
+            background: white;
+            border-radius: 60px;
+            padding: 0.3rem 0.8rem 0.3rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #e3dccf;
+            transition: all 0.2s ease;
+        }
+
+        .music-card:hover {
+            transform: translateX(5px);
+            border-color: var(--sage-light);
+        }
+
+        .music-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .music-info i {
+            font-size: 1.2rem;
+            color: var(--sage);
+        }
+
+        .music-title {
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .music-artist {
+            font-size: 0.7rem;
+            color: #8b9a78;
+        }
+
+        .play-btn {
+            background: var(--sage-soft);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 40px;
+            cursor: pointer;
+            color: #557244;
+            transition: all 0.2s;
+        }
+
+        .play-btn:hover {
+            background: var(--sage-light);
+            transform: scale(1.05);
+        }
+
+        .now-playing {
+            font-size: 0.7rem;
+            margin-top: 10px;
+            text-align: center;
+            color: var(--sage);
+        }
+
+        /* Guest Book */
+        .guestbook-section {
+            background: white;
+            border-radius: 40px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #e9e2d4;
+        }
+
+        .guestbook-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .guestbook-form input,
+        .guestbook-form textarea {
+            padding: 12px 16px;
+            border: 1px solid var(--sage-light);
+            border-radius: 28px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .guestbook-form input:focus,
+        .guestbook-form textarea:focus {
+            border-color: var(--sage);
+        }
+
+        .guestbook-form textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .guestbook-form button {
+            background: var(--sage);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .guestbook-form button:hover {
+            background: #7e966b;
+        }
+
+        .messages-container {
+            max-height: 450px;
+            overflow-y: auto;
+        }
+
+        .message-card {
+            background: var(--sage-soft);
+            border-radius: 20px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e0d9c8;
+        }
+
+        .message-name {
+            font-weight: 700;
+            color: var(--sage-dark);
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .message-date {
+            font-size: 0.65rem;
+            color: #8b9a78;
+            margin-bottom: 0.5rem;
+        }
+
+        .message-text {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #3f3d3b;
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #8b9a78;
+            padding: 2rem;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.75rem;
+            color: #8f9a82;
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 0 1rem; }
+            .hero h1 { font-size: 2rem; }
+            .hero-image { width: 150px; height: 150px; }
+            .hero-content { padding: 1rem 1.2rem; }
+            .typed-text { font-size: 0.9rem; }
+            .cta-button { font-size: 0.8rem; padding: 8px 18px; }
+            .time-unit { min-width: 60px; }
+            .time-number { font-size: 1.3rem; }
+            .cd-box { min-width: 55px; }
+            .cd-number { font-size: 1.2rem; }
+            .section-title { font-size: 1.6rem; }
+            .nav-item { font-size: 0.7rem; padding: 0.3rem 0.6rem; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.8rem; }
+            .favorites-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
+            .fav-icon { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <!-- Hero Section -->
+    <div class="hero" id="heroSection">
+        <div class="hero-content">
+            <img src="hero.jpg" alt="Miguel & Sherly" class="hero-image" 
+                 onerror="this.src='https://placehold.co/500x500/eef3e9/9caf88?text=M+S'">
+            <h1>Miguel & Sherly</h1>
+            <div class="typing-wrapper">
+                <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+            </div>
+            <div class="cta-button" onclick="document.getElementById('messages').scrollIntoView({ behavior: 'smooth' })">
+                <span>Leave a message for us</span>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="click-hint">
+                <i class="fas fa-leaf"></i> Click anywhere for falling leaves <i class="fas fa-leaf"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Countdown Section -->
+        <div class="countdown-section" id="countdownWidget">
+            <div class="countdown-title">
+                <i class="fas fa-heart"></i>
+                <span>Since June 9, 2025</span>
+                <i class="fas fa-infinity"></i>
+            </div>
+            <div class="together-stats">
+                <p><i class="far fa-calendar-check"></i> Together for...</p>
+                <div class="time-digits" id="togetherTimer">
+                    <div class="time-unit"><div class="time-number" id="yearsCount">0</div><div class="time-label">Years</div></div>
+                    <div class="time-unit"><div class="time-number" id="monthsCount">0</div><div class="time-label">Months</div></div>
+                    <div class="time-unit"><div class="time-number" id="daysCount">0</div><div class="time-label">Days</div></div>
+                    <div class="time-unit"><div class="time-number" id="hoursCount">0</div><div class="time-label">Hours</div></div>
+                    <div class="time-unit"><div class="time-number" id="minutesCount">0</div><div class="time-label">Mins</div></div>
+                    <div class="time-unit"><div class="time-number" id="secondsCount">0</div><div class="time-label">Secs</div></div>
+                </div>
+            </div>
+            <div class="countdown-clock">
+                <h3><i class="fas fa-gift"></i> Next Anniversary Countdown</h3>
+                <div class="cd-digits" id="anniversaryCountdown">
+                    <div class="cd-box"><div class="cd-number" id="cdDays">00</div><div class="cd-label">Days</div></div>
+                    <div class="cd-box"><div class="cd-number" id="cdHours">00</div><div class="cd-label">Hours</div></div>
+                    <div class="cd-box"><div class="cd-number" id="cdMins">00</div><div class="cd-label">Mins</div></div>
+                    <div class="cd-box"><div class="cd-number" id="cdSecs">00</div><div class="cd-label">Secs</div></div>
+                </div>
+                <div class="next-anniversary" id="nextAnniversaryText"></div>
+            </div>
+        </div>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+
+        <!-- OUR FAVORITES SECTION - TAMBAHAN BARU -->
+        <section id="favorites">
+            <h2 class="section-title">Our Favorites</h2>
+            <div class="favorites-grid" id="favoritesGrid"></div>
+        </section>
+
+        <!-- Love Letter -->
+        <section id="loveletter">
+            <h2 class="section-title">Love Letter</h2>
+            <div class="love-letters-row">
+                <div class="letter-card">
+                    <div class="letter-header">Miguel's Letter</div>
+                    <div class="letter-body">
+                        <div class="password-area">
+                            <input type="password" id="passMiguel" placeholder="Password">
+                            <button class="unlock-btn" onclick="unlockLetter('miguel')">Unlock</button>
+                        </div>
+                        <div id="miguelContent" class="letter-content locked-message"></div>
+                    </div>
+                </div>
+                <div class="letter-card">
+                    <div class="letter-header">Sherly's Letter</div>
+                    <div class="letter-body">
+                        <div class="password-area">
+                            <input type="password" id="passSherly" placeholder="Password">
+                            <button class="unlock-btn" onclick="unlockLetter('sherly')">Unlock</button>
+                        </div>
+                        <div id="sherlyContent" class="letter-content locked-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Messages for Us - Guest Book -->
+        <section id="messages">
+            <h2 class="section-title">Messages for Us</h2>
+            <div class="guestbook-section">
+                <div class="guestbook-form">
+                    <input type="text" id="guestName" placeholder="Your Name" maxlength="50">
+                    <textarea id="guestMessage" placeholder="Write a message for Miguel & Sherly..." maxlength="500"></textarea>
+                    <button onclick="submitMessage()"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </div>
+                <div class="messages-container" id="messagesContainer">
+                    <div class="empty-message">Loading messages...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music -->
+        <section id="music">
+            <h2 class="section-title">Our Soundtrack</h2>
+            <div class="music-grid" id="musicList"></div>
+            <div id="nowPlayingInfo" class="now-playing"></div>
+            <audio id="globalAudio" preload="none"></audio>
+        </section>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-scroll-wrapper">
+        <div class="nav-bar">
+            <button class="nav-item" data-section="gallery"><i class="fas fa-images"></i> Gallery</button>
+            <button class="nav-item" data-section="favorites"><i class="fas fa-star"></i> Favorites</button>
+            <button class="nav-item" data-section="loveletter"><i class="fas fa-envelope-open-text"></i> Letters</button>
+            <button class="nav-item" data-section="messages"><i class="fas fa-envelope"></i> Messages</button>
+            <button class="nav-item" data-section="music"><i class="fas fa-headphones"></i> Music</button>
+            <button class="nav-item" data-section="countdownWidget"><i class="fas fa-hourglass-half"></i> Countdown</button>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal-img" onclick="closeModal()">
+        <img id="modalImg" src="">
+    </div>
+
+    <footer>
+        <p>Miguel & Sherly — 9 Juni 2025 & Forever. Made with love</p>
+    </footer>
+</main>
+
+<script>
+    // ===================== TYPING EFFECT =====================
+    const phrases = [
+        "Where love grows like wildflowers ",
+        "Every day with you is spring ",
+        "Our journey, our forever "
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedTextElement = document.getElementById('typedText');
+
+    function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+        if (isDeleting) {
+            typedTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 2000);
+            return;
+        }
+
+        if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(typeEffect, 500);
+            return;
+        }
+
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(typeEffect, speed);
+    }
+    typeEffect();
+
+     
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwMfjdXqgdmFcTj2pVHgzKOC3rj1xtW57dJ8b7Jz9KjuuaMJjnACv3sTfim-Sm5hgqM/exec";
+
+    async function loadMessages() {
+        const container = document.getElementById('messagesContainer');
+        if (!container) return;
+        container.innerHTML = '<div class="empty-message">Loading messages...</div>';
+        try {
+            const response = await fetch(GOOGLE_SCRIPT_URL);
+            const messages = await response.json();
+            if (messages.length === 0) { container.innerHTML = '<div class="empty-message">No messages yet. Be the first to write!</div>'; return; }
+            container.innerHTML = '';
+            [...messages].reverse().forEach(msg => {
+                const div = document.createElement('div');
+                div.className = 'message-card';
+                div.innerHTML = `<div class="message-name"><i class="fas fa-user-circle"></i> ${escapeHtml(msg.name)}</div><div class="message-date">${formatDate(msg.timestamp)}</div><div class="message-text">${escapeHtml(msg.message)}</div>`;
+                container.appendChild(div);
+            });
+        } catch(e) { container.innerHTML = '<div class="empty-message">Failed to load messages. Try again later.</div>'; }
+    }
+
+    async function submitMessage() {
+        const name = document.getElementById('guestName').value.trim();
+        const message = document.getElementById('guestMessage').value.trim();
+        if (!name) { alert("Please enter your name!"); return; }
+        if (!message) { alert("Please enter your message!"); return; }
+        const btn = document.querySelector('.guestbook-form button');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        btn.disabled = true;
+        try {
+            await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: name, message: message }) });
+            document.getElementById('guestName').value = "";
+            document.getElementById('guestMessage').value = "";
+            setTimeout(() => loadMessages(), 500);
+            createFallingLeavesMassal(window.innerWidth/2, window.innerHeight/2);
+            alert("Message sent! Thank you 💚");
+        } catch(e) { alert("Failed to send message. Try again."); }
+        finally { btn.innerHTML = originalText; btn.disabled = false; }
+    }
+
+    function formatDate(ts) { if(!ts) return 'Just now'; try { return new Date(ts).toLocaleDateString('en-US', { day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' }); } catch(e){ return ts; } }
+    function escapeHtml(t) { if(!t) return ''; const d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
+
+    // ===================== FALLING LEAVES =====================
+    const leafIcons = ['fas fa-leaf', 'fas fa-feather-alt', 'fas fa-seedling'];
+    const leafColors = ['#9caf88', '#7e966b', '#b5c99a', '#8fb573'];
+    
+    function createOneLeaf(x, y) {
+        const leaf = document.createElement('i');
+        leaf.className = `${leafIcons[Math.floor(Math.random() * leafIcons.length)]} falling-leaf`;
+        leaf.style.color = leafColors[Math.floor(Math.random() * leafColors.length)];
+        leaf.style.fontSize = (14 + Math.random() * 18) + 'px';
+        let posX = x + (Math.random() - 0.5) * 80;
+        posX = Math.max(5, Math.min(window.innerWidth - 5, posX));
+        leaf.style.left = posX + 'px';
+        leaf.style.top = '-30px';
+        leaf.style.animationDuration = (2 + Math.random() * 2.5) + 's';
+        document.body.appendChild(leaf);
+        setTimeout(() => leaf.remove(), 4500);
+    }
+    
+    function createFallingLeavesMassal(x, y) {
+        const jumlah = 3 + Math.floor(Math.random() * 5);
+        for(let i = 0; i < jumlah; i++) {
+            setTimeout(() => createOneLeaf(x, y), i * 80);
+        }
+    }
+    
+    document.body.addEventListener('click', (e) => createFallingLeavesMassal(e.clientX, e.clientY));
+    document.body.addEventListener('touchstart', (e) => { if(e.touches.length) createFallingLeavesMassal(e.touches[0].clientX, e.touches[0].clientY); });
+    
+    setTimeout(() => {
+        for(let i = 0; i < 12; i++) {
+            setTimeout(() => createOneLeaf(Math.random() * window.innerWidth, 0), i * 100);
+        }
+    }, 500);
+
+    // ===================== COUNTDOWN =====================
+    const startDate = new Date(2025, 5, 9, 0, 0, 0);
+    function updateCounters() {
+        const now = new Date();
+        let years = now.getFullYear() - startDate.getFullYear();
+        let months = now.getMonth() - startDate.getMonth();
+        let days = now.getDate() - startDate.getDate();
+        if(days < 0){ months--; let lm = new Date(now.getFullYear(), now.getMonth(), 0); days = lm.getDate() + days; }
+        if(months < 0){ years--; months += 12; }
+        document.getElementById('yearsCount').innerText = years;
+        document.getElementById('monthsCount').innerText = months;
+        document.getElementById('daysCount').innerText = days;
+        document.getElementById('hoursCount').innerText = now.getHours();
+        document.getElementById('minutesCount').innerText = now.getMinutes();
+        document.getElementById('secondsCount').innerText = now.getSeconds();
+        let nextAnniv = new Date(now.getFullYear(), 5, 9);
+        if(now > nextAnniv) nextAnniv = new Date(now.getFullYear() + 1, 5, 9);
+        let diff = nextAnniv - now;
+        document.getElementById('cdDays').innerText = Math.floor(diff / 86400000);
+        document.getElementById('cdHours').innerText = Math.floor((diff % 86400000) / 3600000);
+        document.getElementById('cdMins').innerText = Math.floor((diff % 3600000) / 60000);
+        document.getElementById('cdSecs').innerText = Math.floor((diff % 60000) / 1000);
+        document.getElementById('nextAnniversaryText').innerHTML = `Anniversary ke-${years + 1} akan tiba pada ${nextAnniv.toLocaleDateString('id-ID', { day:'numeric', month:'long', year:'numeric' })}`;
+    }
+    setInterval(updateCounters, 1000);
+    updateCounters();
+
+    // ===================== GALLERY GRID =====================
+    const galleryImages = ["1.png","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.png","15.png","16.png","17.png"];
+    
+    function buildGallery() {
+        const container = document.getElementById('galleryGrid');
+        if (!container) return;
+        container.innerHTML = '';
+        galleryImages.forEach(src => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.innerHTML = `<img src="${src}" loading="lazy" onerror="this.src='https://placehold.co/400x400/d4e0ca/9caf88?text=Love'">`;
+            item.onclick = () => {
+                document.getElementById('imageModal').style.display = 'flex';
+                document.getElementById('modalImg').src = src;
+            };
+            container.appendChild(item);
+        });
+    }
+    
+    window.closeModal = () => document.getElementById('imageModal').style.display = 'none';
+    buildGallery();
+
+    // ===================== OUR FAVORITES =====================
+    const favoritesData = [
+        { icon: "fas fa-utensils", category: "Makanan", miguel: "Sate syam", sherly: "Ayam goreng" },
+        { icon: "fas fa-mug-hot", category: "Minuman", miguel: "Amerinaco", sherly: "Matcha" },
+        { icon: "fas fa-film", category: "Film", miguel: "Pengepungan di Bukit Duri", sherly: "Conjuring 2" },
+        { icon: "fas fa-music", category: "Lagu", miguel: "Basket case - Green Day", sherly: "Rabun jauh - Bernadya" },
+        { icon: "fas fa-palette", category: "Warna", miguel: "Biru", sherly: "Hijau" },
+        { icon: "fas fa-star", category: "Hobi", miguel: "Olahraga", sherly: "Menyanyi" },
+        { icon: "fas fa-gamepad", category: "Game", miguel: "GTA", sherly: "Pazu" }
+    ];
+
+    function buildFavorites() {
+        const container = document.getElementById('favoritesGrid');
+        if (!container) return;
+        container.innerHTML = '';
+        favoritesData.forEach(fav => {
+            const card = document.createElement('div');
+            card.className = 'fav-card';
+            card.innerHTML = `
+                <div class="fav-icon"><i class="${fav.icon}"></i></div>
+                <div class="fav-category">${fav.category}</div>
+                <div class="fav-item-miguel"><span style="display:inline-block; width:22px; height:22px; background:#2c4522; color:white; border-radius:50%; text-align:center; font-size:12px; line-height:22px; margin-right:6px;">M</span> ${fav.miguel}</div>
+<div class="fav-divider"></div>
+<div class="fav-item-sherly"><span style="display:inline-block; width:22px; height:22px; background:#6b8256; color:white; border-radius:50%; text-align:center; font-size:12px; line-height:22px; margin-right:6px;">S</span> ${fav.sherly}</div>
+            `;
+            container.appendChild(card);
+        });
+    }
+    buildFavorites();
+
+    // ===================== LOVE LETTER =====================
+    window.unlockLetter = function(who) {
+        if(who === 'miguel') {
+            if(document.getElementById('passMiguel').value === "0903") {
+                document.getElementById('miguelContent').innerHTML = "Untuk Sherly,<br><br>Kalo bisa aku mau selamanya sama kamu. Kalo kamu mau tau setiap pandanganku kemanapun itu pasti ada aja kamu disitu. Merem juga yang dilihat kamu, kamu betul betul berkeliaran di duniaku. Aku ngga pernah lihat kamu sebagai pilihan. Karena dari awal memang kamu tujuanku. Everyone has someone special in their life, for me that person is you. I promise to love your soul in all seasons. You are not just a girl, you're my home, my heart and my safest place, you're my everything. You're such a bright soul in this world. I hope u know that i appreciate you more than you'll ever know. No metter how this ends thank you for being there. I love you. I love you more than anything. I love you more than myself. I will always love you. I will love you till the and of my time. No words can express how much i love you.<br><br>— Miguel";
+                document.getElementById('miguelContent').classList.remove('locked-message');
+            } else alert("Password salah!");
+        } else {
+            if(document.getElementById('passSherly').value === "1505") {
+                document.getElementById('sherlyContent').innerHTML = "Untuk Miguel,<br><br>my dearest Abim, if you are ask me why i fell in love with you is because you love me in a ways no one ever have, sincere heart and care. you made me feel valued in ways i never thought i deserved. beings with you make me feel the luckiest girl alive. it's like you're aswers to my payers i did even know would come true. even when i try to push you away, you stayed and understand me. from the bottom of my heart, im grateful that you're in my life because you've become a quiet strength i didn't even know i needed. no matter how heavy life gets, the thought if you alone makes everything lighter, and i will always cherish you for that.<br><br>— Sherly";
+                document.getElementById('sherlyContent').classList.remove('locked-message');
+            } else alert("Password salah!");
+        }
+    };
+
+    // ===================== MUSIC =====================
+    const songs = [
+        { title: "Pernah Muda", artist: "Bunga Citra Lestari", src: "musik/lagu1.mp3" },
+        { title: "Oh Kasih", artist: "Shanty", src: "musik/lagu2.mp3" },
+        { title: "Sejauh Ku Memandang", artist: "BiancaDimas, The Nelwans", src: "musik/lagu3.mp3" },
+        { title: "Teman Hidup", artist: "Tulus", src: "musik/lagu4.mp3" },
+        { title: "Hanya Kamu Yang Bisa", artist: "Tiket", src: "musik/lagu5.mp3" },
+        { title: "123456", artist: "Budi Doremi", src: "musik/lagu6.mp3" }
+    ];
+    let currentAudio = document.getElementById('globalAudio'), currentIdx = -1;
+    function buildMusic() {
+        const c = document.getElementById('musicList');
+        if(!c) return;
+        c.innerHTML = '';
+        songs.forEach((s, i) => {
+            let card = document.createElement('div');
+            card.className = 'music-card';
+            card.innerHTML = `<div class="music-info"><i class="fas fa-leaf"></i><div><div class="music-title">${s.title}</div><div class="music-artist">${s.artist}</div></div></div><button class="play-btn" data-idx="${i}"><i class="fas fa-play"></i></button>`;
+            c.appendChild(card);
+        });
+        document.querySelectorAll('.play-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                let idx = parseInt(btn.getAttribute('data-idx'));
+                togglePlay(idx);
+            });
+        });
+    }
+    function togglePlay(idx) {
+        if(currentIdx === idx && !currentAudio.paused) {
+            currentAudio.pause();
+            document.querySelector(`.play-btn[data-idx='${idx}']`).innerHTML = '<i class="fas fa-play"></i>';
+            document.getElementById('nowPlayingInfo').innerHTML = '';
+            currentIdx = -1;
+        } else {
+            if(currentAudio) currentAudio.pause();
+            currentAudio.src = songs[idx].src;
+            currentAudio.load();
+            currentAudio.play();
+            currentIdx = idx;
+            document.getElementById('nowPlayingInfo').innerHTML = `<i class="fas fa-music"></i> Now playing: ${songs[idx].title} - ${songs[idx].artist}`;
+            document.querySelectorAll('.play-btn').forEach((b, i) => { b.innerHTML = (i === idx) ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>'; });
+        }
+    }
+    buildMusic();
+    setTimeout(() => {
+        if(songs[0]) {
+            currentAudio.src = songs[0].src;
+            currentAudio.load();
+            currentAudio.play().catch(() => {});
+            currentIdx = 0;
+            document.getElementById('nowPlayingInfo').innerHTML = `<i class="fas fa-music"></i> Now playing: ${songs[0].title} - ${songs[0].artist}`;
+            let btn = document.querySelector(`.play-btn[data-idx='0']`);
+            if(btn) btn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+    }, 500);
+
+    // Navigation
+    document.querySelectorAll('.nav-item').forEach(btn => {
+        btn.addEventListener('click', () => {
+            let targetId = btn.getAttribute('data-section');
+            let target = document.getElementById(targetId);
+            if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // Load messages
+    loadMessages();
+</script>
+</body>
+</html>
